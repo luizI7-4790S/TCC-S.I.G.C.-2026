@@ -1,0 +1,672 @@
+:root {
+    /* Tons de Verde e Destaques (Tema Claro) */
+    --primary: #1b5e20;
+    /* Verde escuro e elegante para elementos principais/títulos */
+    --primary-light: #2e7d32;
+    /* Verde vibrante para gradiente e hovers */
+    --accent: #388e3c;
+    /* Verde de destaque para ícones */
+    --bg-body: #e8f5e9;
+    /* Fundo geral verde bem suave e leve */
+    --text-dark: #333333;
+    /* Texto escuro principal */
+    --white: #ffffff;
+    /* Fundo branco para cards e superfícies */
+    --border-color: #c8e6c9;
+    /* Bordas sutis em verde suave */
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-dark);
+}
+
+details {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 12px 16px;
+    transition: border-color 0.2s ease-in-out;
+}
+
+summary {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+details:hover {
+    border-color: var(--primary-light);
+}
+
+/* Header Moderno */
+header {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+    height: 60px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Opcional: overlay para escurecer a tela quando o menu mobile estiver aberto */
+.menu-overlay {
+    display: none;
+}
+
+/* Ícone hambúrguer oculto no Desktop */
+.hamburger {
+    display: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: #ffffff;
+    user-select: none;
+}
+
+/* Sidebar Estilizada */
+ul.sidenav {
+    list-style-type: none;
+    margin: 0;
+    padding: 20px 0;
+    width: 240px;
+    background-color: var(--white);
+    position: fixed;
+    top: 50px;
+    height: calc(100vh - 90px);
+    max-height: calc(100vh - 90px);
+    border-right: 1px solid var(--border-color);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.02);
+    overflow-y: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 16 / 9;
+}
+
+/* ==========================================================================
+   Bloco Mensagem Boa - TEMA CLARO VERDE
+   ========================================================================== */
+
+.bloco-msgBoa {
+    background-color: #c8e6c9;             /* Fundo verde claro */
+    border-left: 5px solid #2e7d32;        /* Borda verde vibrante */
+    color: #1b5e20;                       /* Texto escuro de excelente leitura */
+    
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 4px 8px 8px 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    
+    font-family: sans-serif;
+}
+
+.bloco-msgBoa h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.bloco-msgBoa p {
+    margin: 8px 0;
+}
+
+.bloco-msgBoa strong {
+    color: #0d3111;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* ==========================================================================
+   Bloco Mensagem Alerta - TEMA CLARO VERDE
+   ========================================================================== */
+
+.bloco-msgAlerta {
+    background-color: #fff3e0;             /* Fundo pastel para alertas */
+    border-left: 5px solid #ff9800;        /* Borda lateral de destaque */
+    color: #e65100;                       /* Texto escuro em laranja/marrom */
+    
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 4px 8px 8px 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    
+    font-family: sans-serif;
+}
+
+.bloco-msgAlerta h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.bloco-msgAlerta p {
+    margin: 8px 0;
+}
+
+.bloco-msgAlerta strong {
+    color: #b71c1c;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+ul.sidenav:hover {
+    padding-right: 5px;
+    box-shadow: 6px 0 30px rgba(46, 125, 50, 0.25);
+}
+
+ul.sidenav li a {
+    display: flex;
+    align-items: center;
+    color: #555;
+    padding: 12px 25px;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 0.95rem;
+}
+
+ul.sidenav li a i {
+    margin-right: 15px;
+    width: 20px;
+    color: var(--accent);
+}
+
+ul.sidenav li a:hover {
+    background-color: #c8e6c9;
+    color: var(--primary);
+    padding-left: 30px;
+}
+
+ul.sidenav li a.active {
+    background-color: var(--primary);
+    color: white;
+    font-weight: 600;
+}
+
+ul.sidenav li a.active i {
+    color: white;
+}
+
+/* Botão Padrão do Sistema */
+button,
+input[type="submit"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+button:active,
+input[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+button,
+input[type="submit"] {
+    background-color: var(--primary);
+    color: #ffffff;
+    box-shadow: 0 2px 5px rgba(27, 94, 32, 0.2);
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: var(--primary-light);
+    box-shadow: 0 4px 8px rgba(27, 94, 32, 0.3);
+}
+
+input[type="text"], input[type="date"], input[type="number"], textarea, select {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.95rem;
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid #a5d6a7;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+input[type="text"]:focus, input[type="date"]:focus, input[type="number"]:focus, textarea:focus, select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(27, 94, 32, 0.15);
+}
+
+input[type="text"]::placeholder {
+    color: #999999;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 12px;
+    padding-right: 40px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+select option {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+/* Container da Nota */
+.bloco-nota {
+    padding: 16px 20px;
+    margin: 25px 0;
+    border-radius: 4px 8px 8px 4px;
+    border-left: 4px solid var(--primary);
+    background-color: #c8e6c9;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.bloco-nota h3 {
+    margin: 0 0 6px 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--primary);
+}
+
+.bloco-nota p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #1b5e20;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #a5d6a7;
+    width: 95%;
+    margin: 20px auto;
+}
+
+table {
+    border-radius: 15px;
+    width: 100%;
+    padding: 2%;
+}
+
+tr {
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: center;
+}
+
+td {
+    border: var(--border-color) solid 1px;
+    border-radius: 2px;
+}
+
+td.acoes {
+    text-align: center;
+}
+
+.botaoTable {
+    text-decoration: none;
+    margin-inline: 5%;
+}
+
+.botaoTable_editar {
+    background-color: #2e7d32;
+    color: white;
+}
+
+.botaoTable_excluir {
+    background-color: #d32f2f;
+    color: white;
+}
+
+.botaoTable_editar:hover {
+    background-color: #1b5e20;
+}
+
+.botaoTable_excluir:hover {
+    background-color: #b71c1c;
+}
+
+/* ==========================================================================
+   MODAL / DIALOG (TEMA CLARO VERDE)
+   ========================================================================== */
+dialog {
+    background-color: #ffffff;
+    color: #333333;
+    border-radius: 12px;
+    border: none;
+    width: 90%;
+    max-width: 400px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.h2Dialog {
+    color: var(--primary);
+    text-align: center;
+    margin-top: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.pDialog {
+    color: #555555;
+    font-weight: 500;
+    text-align: center;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 10px 0;
+}
+
+.botoesDialog {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.botoesDialog button {
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 18px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#cancelar {
+    color: #555555;
+    background-color: #f1f1f1;
+}
+
+#cancelar:hover {
+    background-color: #e4e4e4;
+}
+
+#excluir {
+    color: white;
+    background-color: #d32f2f;
+}
+
+#excluir:hover {
+    background-color: #b71c1c;
+    box-shadow: 0 2px 5px rgba(211, 47, 47, 0.4);
+}
+
+.logout {
+    margin-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Área de Conteúdo */
+.main-wrapper {
+    margin-left: 240px;
+    margin-top: 80px;
+    padding: 30px;
+}
+
+.welcome-section h2 {
+    margin: 0;
+    font-weight: 300;
+}
+
+.welcome-section h2 span {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.welcome-section p {
+    color: #777;
+    margin-top: 5px;
+}
+
+/* Grid de Cards */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
+    transition: 0.3s;
+}
+
+.card:hover, .card-header:hover {
+    border-color: var(--primary-light);
+}
+
+.card-header {
+    background-color: #f1f8e9;
+    padding: 15px 20px;
+    font-weight: bold;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--primary);
+    transition: 0.3s;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 0.9rem;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.list-item span {
+    color: #e53935;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Responsividade Básica */
+@media screen and (max-width: 900px) {
+    ul.sidenav {
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    ul.sidenav li {
+        flex: 1 1 150px;
+    }
+
+    .main-wrapper {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+.radio-group {
+    border: 1px solid var(--border-color);
+    background-color: #ffffff;
+    padding: 12px 14px;
+    border-radius: 6px;
+    margin: 15px 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.radio-label {
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.radio-input {
+    cursor: pointer;
+    accent-color: var(--primary);
+    width: 16px;
+    height: 16px;
+}
+
+/* ==========================================================================
+   ADAPTAÇÃO MOBILE (CELULAR <= 768px)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    
+    /* Exibe o botão Hambúrguer no Celular */
+    .hamburger {
+        display: block;
+    }
+
+    /* Overlay de fundo ao abrir menu */
+    .menu-overlay {
+        display: block;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - 60px);
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease;
+        z-index: 998;
+    }
+
+    /* Menu Lateral Escondido por padrão (Off-canvas) */
+    ul.sidenav {
+        position: fixed !important;
+        top: 60px !important;
+        left: -280px !important; /* Esconde para fora da tela na esquerda */
+        width: 260px !important;
+        height: calc(100vh - 60px) !important;
+        max-height: none !important;
+        background-color: var(--white) !important;
+        z-index: 999 !important;
+        transition: left 0.3s ease-in-out !important;
+        box-shadow: 4px 0 15px rgba(0, 0, 0, 0.5) !important;
+        overflow-y: auto !important;
+        margin: 0 !important;
+        padding: 10px 0 !important;
+    }
+
+    /* Quando o checkbox estiver marcado (Menu Aberto) */
+    #menu-toggle:checked ~ ul.sidenav {
+        left: 0 !important; /* Faz o menu deslizar para dentro da tela */
+    }
+
+    #menu-toggle:checked ~ .menu-overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Ajuste do Wrapper Principal no Celular */
+    .main-wrapper {
+        margin-left: 0 !important;
+        margin-top: 70px !important;
+        padding: 15px !important;
+    }
+
+    /* Imagens responsivas no conteúdo */
+    .card-body img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Botões e Inputs com área de toque acessível */
+    button,
+    input[type="submit"],
+    input[type="text"],
+    input[type="date"],
+    input[type="number"],
+    textarea,
+    select {
+        width: 100% !important;
+        min-height: 44px;
+        box-sizing: border-box;
+        margin-bottom: 8px;
+    }
+
+    /* Tabelas com rolagem horizontal interna */
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* Modais responsivos */
+    dialog {
+        width: 92% !important;
+        padding: 15px !important;
+    }
+
+    .botoesDialog {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .botoesDialog button {
+        width: 100%;
+    }
+}
